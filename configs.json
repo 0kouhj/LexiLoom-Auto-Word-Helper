@@ -1,0 +1,48 @@
+{
+  "system": {
+    "theme": "dark",
+    "language": "zh_CN",
+    "window_opacity": 1.0,
+    "loop_delay": 1.5,
+    "random_delay_range": 0.5,
+    "auto_start_adb": true,
+    "save_debug_images": true,
+    "log_level": "INFO"
+  },
+  "llm": {
+    "mode": "local",
+    "model_name": "qwen2.5:7b",
+    "api_key": "",
+    "api_url": "http://localhost:11434/api/generate",
+    "temperature": 0.0,
+    "timeout": 10,
+    "max_tokens": 10,
+    "prompt_template": "回答A/B/C/D"
+  },
+  "devices": [
+    {
+      "id": "test_adb_123",
+      "name": "我的测试机",
+      "resolution": "1080x1920",
+      "roi": {
+        "topic": [
+          0,
+          0,
+          100,
+          100
+        ],
+        "A": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "B": [],
+        "C": [],
+        "D": []
+      },
+      "tap": {}
+    }
+  ],
+  "last_device_id": null
+}

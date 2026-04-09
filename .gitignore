@@ -1,0 +1,35 @@
+# --- Python 运行环境 ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+build/
+dist/
+
+# --- 项目特定调试文件 ---
+# 自动生成的 ROI 切图，不需要进入版本控制
+debug/
+*.png
+*.jpg
+*.jpeg
+
+# --- 编辑器与 IDE 配置 ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- 操作系统临时文件 ---
+.DS_Store
+Thumbs.db
+
+# --- 本地配置文件 ---
+# 如果你希望每个人的坐标配置保持独立，可以取消下面这行的注释
+# configs/devices.json
+
+# --- 日志文件 ---
+*.log

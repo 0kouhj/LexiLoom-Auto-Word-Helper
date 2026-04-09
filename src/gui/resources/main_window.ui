@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>673</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    /* 格式：宽度 实线 颜色(使用rgba实现半透明) */
+    border: 1px solid rgba(0, 0, 0, 185); 
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 150);
+}
+/* 鼠标悬停时的状态 */
+QPushButton:hover {
+    border: 2px solid rgba(74, 144, 226, 180); 
+	background-color: rgba(0, 120, 215, 0.1);
+    color: #2d5a89; 
+}
+
+/* 鼠标按下时的状态（可选，增加点击反馈） */
+QPushButton:pressed {
+    background-color: rgba(135, 206, 250, 255);
+    border: 2px solid rgba(74, 144, 226, 255);
+}
+
+QMainWindow{margin:0px;
+	padding:0px;}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="layoutDirection">
+    <enum>Qt::LayoutDirection::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{background-color:#d6e4f7;
+	margin:0px;
+	padding:0px;}
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>6</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0" rowspan="4">
+     <widget class="QStackedWidget" name="content_stack">
+      <property name="styleSheet">
+       <string notr="true">/* 使用通配符或确保没有 ID 限制 */
+QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 20px;
+	margin-bottom:20px;
+	margin-left:15 px;
+	margin-right:15px;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+/* 强制让 QStackedWidget 内部的所有 GroupBox 继承 */
+QStackedWidget QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_0">
+       <property name="styleSheet">
+        <string notr="true">QWidget { background-color: #d6e4f7; }
+QWidget { 
+    color: #000000; 
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="start_env_check">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox { background-color: #FFFFFF; }
+QGroupBox{padding:0px;}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>15</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 100);
+}</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QLabel" name="label_adb_status">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {background-color : #FFFFFF;}</string>
+                </property>
+                <property name="text">
+                 <string>ADB状态: 等待检测</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_ollama_status">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {background-color : #FFFFFF;}</string>
+                </property>
+                <property name="text">
+                 <string>Ollama 状态: 等待检测</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_check_env">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{background-color:#FFFFFF;}</string>
+                </property>
+                <property name="text">
+                 <string>重新检查环境</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QFrame{margin:15px;}</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    /* 1. 背景与圆角 */
+    background-color: #ffffff;    /* 纯白背景 */
+    border-radius: 6px;           /* 稍微带一点圆角，配合整体风格 */
+    
+    /* 2. 文字样式 */
+    color: #000000;               /* 文字黑色 */
+    font-size: 12pt;              /* 字号 12 (注意单位是 pt 或 px) */
+    font-weight: bold;            /* 粗体 */
+}</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;系&lt;/p&gt;&lt;p&gt;统&lt;/p&gt;&lt;p&gt;环&lt;/p&gt;&lt;p&gt;境&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="system_info">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {background-color: #FFFFFF;}
+QGroupBox{padding:0px;}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="leftMargin">
+            <number>15</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 100);
+}
+QLabel {background-color : #FFFFFF;}</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_device_model">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_device_screen">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="label_device_screen_text">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>屏幕分辨率</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_device_model_text">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>手机型号</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_Ollama_AIs">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="label_Ollama_AIs_text">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ollama AI&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_2">
+             <property name="styleSheet">
+              <string notr="true">QFrame{margin:15px;}</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LayoutDirection::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {background-color : #FFFFFF;}</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;配&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;置&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;信&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_1">
+       <property name="styleSheet">
+        <string notr="true">QWidget { background-color: #d6e4f7; }
+QWidget { 
+    color: #000000; 
+}
+/* 使用通配符或确保没有 ID 限制 */
+QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 20px;
+	margin-left:15 px;
+	margin-right:15px;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="3" column="1">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="styleSheet">
+           <string notr="true">QLabel{background-color:#FFFFFF;}
+QGroupBox{padding:0px;}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 0px;
+	margin-bottom:0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 100);
+}</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>14</number>
+              </property>
+              <item row="1" column="3">
+               <widget class="QLineEdit" name="edit_topic_x1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLineEdit" name="edit_a_y2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLineEdit" name="edit_d_y2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="4">
+               <widget class="QLabel" name="label_4">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>C</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QLineEdit" name="edit_a_x1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="edit_c_x2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLineEdit" name="edit_a_y1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLineEdit" name="edit_topic_y1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QLabel" name="label">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>题目</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QLineEdit" name="edit_d_x1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLineEdit" name="edit_topic_y2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLineEdit" name="edit_b_y2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>x1</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="edit_topic_x2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>x2</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="edit_b_x2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLineEdit" name="edit_c_y2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="edit_a_x2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="4">
+               <widget class="QLabel" name="label_3">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>B</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QLineEdit" name="edit_c_y1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QLineEdit" name="edit_b_x1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLineEdit" name="edit_b_y1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>y1</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>y2</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="4">
+               <widget class="QLabel" name="label_5">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>D</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="edit_d_x2">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QLineEdit" name="edit_d_y1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QLineEdit" name="edit_c_x1">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="4">
+               <widget class="QLabel" name="label_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>120</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>A</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_4">
+             <property name="styleSheet">
+              <string notr="true">QFrame{margin:15px;}</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+            <widget class="QLabel" name="label_14">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    /* 1. 背景与圆角 */
+    background-color: #ffffff;    /* 纯白背景 */
+    border-radius: 6px;           /* 稍微带一点圆角，配合整体风格 */
+    
+    /* 2. 文字样式 */
+    color: #000000;               /* 文字黑色 */
+    font-size: 12pt;              /* 字号 12 (注意单位是 pt 或 px) */
+    font-weight: bold;            /* 粗体 */
+    
+    /* 3. 居中对齐 (样式表写法) */
+    qproperty-alignment: 'AlignHCenter | AlignVCenter';
+}</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;当&lt;/p&gt;&lt;p&gt;前&lt;/p&gt;&lt;p&gt;坐&lt;/p&gt;&lt;p&gt;标&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="ClickableCanvas" name="label_canvas">
+          <property name="minimumSize">
+           <size>
+            <width>1</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>1</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{padding:0px;}</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2" colspan="2">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>250</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>250</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{background-color:#FFFFFF;}
+QGroupBox{padding:0px;}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 0px;
+	margin-bottom:0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 100);
+}
+QPushButton{
+	margin:1px;
+}</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="3" column="1">
+               <widget class="QPushButton" name="btn_refresh_config">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>预览坐标配置</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QComboBox" name="combo_configs">
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/* 1. ComboBox 本体 */
+QComboBox {
+    border: 1px solid rgba(0, 0, 0, 185); 
+    border-radius: 8px;
+    padding: 2px 10px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+/* 2. 悬停和打开时的边框颜色 */
+QComboBox:hover {
+    border: 1px solid #0078d7;
+}
+
+QComboBox:on { /* 展开时的状态 */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* 1. 下拉区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border: none;
+}
+
+/* 2. 核心：画一条横线 */
+QComboBox::down-arrow {
+    image: none; 
+    background-color: #666666; /* 横线的颜色 */
+    width: 10px;               /* 横线的长度 */
+    height: 2px;               /* 横线的粗细 */
+    
+    /* 这里的 margin 可以微调横线在格子里的位置 */
+    margin-right: 10px; 
+}
+
+
+/* 5. 下拉出来的列表框本体 */
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    selection-background-color: #0078d7; /* 选中项背景 */
+    selection-color: #ffffff;            /* 选中项文字 */
+    outline: none;                       /* 去掉虚线框 */
+}
+
+/* 6. 下拉列表里的每一项 */
+QComboBox QAbstractItemView::item {
+    min-height: 30px;
+    padding-left: 10px;
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QComboBox" name="combo_ai_model">
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/* 1. ComboBox 本体 */
+QComboBox {
+    border: 1px solid rgba(0, 0, 0, 185); 
+    border-radius: 8px;
+    padding: 2px 10px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+/* 2. 悬停和打开时的边框颜色 */
+QComboBox:hover {
+    border: 1px solid #0078d7;
+}
+
+QComboBox:on { /* 展开时的状态 */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border: none;
+}
+
+/* 2. 核心：画一条横线 */
+QComboBox::down-arrow {
+    image: none; 
+    background-color: #666666; /* 横线的颜色 */
+    width: 10px;               /* 横线的长度 */
+    height: 2px;               /* 横线的粗细 */
+    
+    /* 这里的 margin 可以微调横线在格子里的位置 */
+    margin-right: 10px; 
+}
+
+
+/* 5. 下拉出来的列表框本体 */
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    selection-background-color: #0078d7; /* 选中项背景 */
+    selection-color: #ffffff;            /* 选中项文字 */
+    outline: none;                       /* 去掉虚线框 */
+}
+
+/* 6. 下拉列表里的每一项 */
+QComboBox QAbstractItemView::item {
+    min-height: 30px;
+    padding-left: 10px;
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QPushButton" name="btn_load_config">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>加载配置</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="btn_create_config">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>创建配置</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="btn_delete_config">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>删除配置</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0" colspan="2">
+               <widget class="QPushButton" name="btn_save_config">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>保存配置</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_3">
+             <property name="styleSheet">
+              <string notr="true">QFrame{margin:15px;}</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    /* 1. 背景与圆角 */
+    background-color: #ffffff;    /* 纯白背景 */
+    border-radius: 6px;           /* 稍微带一点圆角，配合整体风格 */
+    
+    /* 2. 文字样式 */
+    color: #000000;               /* 文字黑色 */
+    font-size: 12pt;              /* 字号 12 (注意单位是 pt 或 px) */
+    font-weight: bold;            /* 粗体 */
+    
+    /* 3. 居中对齐 (样式表写法) */
+    qproperty-alignment: 'AlignHCenter | AlignVCenter';
+}</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;配&lt;/p&gt;&lt;p&gt;置&lt;/p&gt;&lt;p&gt;编&lt;/p&gt;&lt;p&gt;辑&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <property name="styleSheet">
+        <string notr="true">QWidget { background-color: #d6e4f7; }
+QWidget { 
+    color: #000000; 
+}
+/* 使用通配符或确保没有 ID 限制 */
+QGroupBox {
+    border: 0px solid #a0b0c5;
+    border-radius: 12px;
+    margin-top: 20px;
+	margin-left:15 px;
+	margin-right:15px;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+QPushButton{background-color:#FFFFFF;
+	margin-left :10px;
+	margin-right:10px;
+	margin-top:20px;}
+
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btn_start_task">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>开始运行</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btn_stop_task">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>停止运行</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTextEdit" name="text_log_output">
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{background-color:#FFFFFF;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:20px;
+	padding:10px;
+	border: 1px solid rgba(0, 0, 0, 125); 
+    border-radius: 20px;}</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QGroupBox" name="GGB">
+      <property name="minimumSize">
+       <size>
+        <width>130</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{background-color:#116fcd;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>30</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+        <widget class="QLabel" name="label_avatar">
+         <property name="minimumSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{background-color: transparent;}</string>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+        <widget class="QLabel" name="label_10">
+         <property name="styleSheet">
+          <string notr="true">QLabel{color:rgb(247, 150, 153);
+	font: 700 16pt &quot;Microsoft YaHei UI&quot;;background-color:transparent;
+margin-top:10px;}</string>
+         </property>
+         <property name="text">
+          <string>0kouhj</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_5">
+         <property name="styleSheet">
+          <string notr="true">QFrame{margin:6px;}</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+        <widget class="QListWidget" name="nav_list">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* 1. 列表整体容器 */
+QListWidget {
+    background-color: rgba(255,255,255,0); /* 背景透明，由父级 GroupBox 决定
+ */
+	border-radius:8px;
+	font-weight: bold;
+    border: none;                  /* 去掉外边框 */
+    outline: none;                 /* 去掉点击时的虚线框 */
+    padding: 10px 5px;             /* 上下留点呼吸空间 */
+}
+
+/* 2. 每一个导航选项（未选中状态） */
+QListWidget::item {
+    background-color: transparent;
+    color: #FFFFFF;                /* 深灰色文字 */
+    border-radius: 6px;            /* 圆角矩形 */
+    margin-bottom: 8px;            /* 每个按钮之间的纵向间距 */
+    padding-top:10px;
+	padding-bottom:10px;
+	padding-left:8px;
+	padding-right:8px;
+    border: 1px solid transparent; /* 预留边框位置防止闪烁 */
+}
+
+/* 3. 鼠标悬停（未选中时） */
+QListWidget::item:hover {
+    background-color: rgba(0, 0, 0, 0.06); /* 极浅的灰色遮罩 */
+    color: #000000;
+}
+
+/* 4. 选中状态（重点） */
+QListWidget::item:selected {
+    background-color: #cbdcf7;     /* PCL 经典的蓝色（或者你喜欢的强调色） */
+    color: #000000;                /* 选中后文字变白 */
+    font-weight: bold;             /* 选中后加粗 */
+}
+
+/* 5. 选中且鼠标悬停 */
+QListWidget::item:selected:hover {
+    background-color: #a5c5f7;     /* 颜色稍微深一点点 */
+}</string>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SelectionMode::ContiguousSelection</enum>
+         </property>
+         <property name="textElideMode">
+          <enum>Qt::TextElideMode::ElideMiddle</enum>
+         </property>
+         <property name="movement">
+          <enum>QListView::Movement::Static</enum>
+         </property>
+         <property name="viewMode">
+          <enum>QListView::ViewMode::IconMode</enum>
+         </property>
+         <property name="currentRow">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>环境检查</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>坐标标定</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>开始运行</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_6">
+         <property name="styleSheet">
+          <string notr="true">QFrame{margin:6px;}</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+        <widget class="QPushButton" name="btn_github">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{margin-top:5px;
+font: 700 10pt &quot;Microsoft YaHei UI&quot;;
+color:#000000;}</string>
+         </property>
+         <property name="text">
+          <string>📦Github</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+        <widget class="QPushButton" name="btn_blog">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{margin-bottom:10px;
+	margin-top:5px;font: 700 10pt &quot;Microsoft YaHei UI&quot;;
+color:#000000;}</string>
+         </property>
+         <property name="text">
+          <string>📝Blog</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableCanvas</class>
+   <extends>QLabel</extends>
+   <header location="global">app.gui.canvas_label</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
