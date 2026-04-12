@@ -269,243 +269,6 @@ class Ui_MainWindow(object):
 "")
         self.gridLayout_3 = QGridLayout(self.page_1)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.groupBox_6 = QGroupBox(self.page_1)
-        self.groupBox_6.setObjectName(u"groupBox_6")
-        self.groupBox_6.setStyleSheet(u"QLabel{background-color:#FFFFFF;}\n"
-"QGroupBox{padding:0px;}")
-        self.horizontalLayout_5 = QHBoxLayout(self.groupBox_6)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.groupBox_3 = QGroupBox(self.groupBox_6)
-        self.groupBox_3.setObjectName(u"groupBox_3")
-        self.groupBox_3.setStyleSheet(u"QGroupBox {\n"
-"    border: 0px solid #a0b0c5;\n"
-"    border-radius: 12px;\n"
-"    margin-top: 0px;\n"
-"	margin-bottom:0px;\n"
-"    padding: 0px;\n"
-"    background-color: rgba(255, 255, 255, 100);\n"
-"}")
-        self.gridLayout_5 = QGridLayout(self.groupBox_3)
-        self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.gridLayout_5.setContentsMargins(-1, 0, -1, 14)
-        self.edit_topic_x1 = QLineEdit(self.groupBox_3)
-        self.edit_topic_x1.setObjectName(u"edit_topic_x1")
-        self.edit_topic_x1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_topic_x1, 1, 3, 1, 1)
-
-        self.edit_a_y2 = QLineEdit(self.groupBox_3)
-        self.edit_a_y2.setObjectName(u"edit_a_y2")
-        self.edit_a_y2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_a_y2, 2, 0, 1, 1)
-
-        self.edit_d_y2 = QLineEdit(self.groupBox_3)
-        self.edit_d_y2.setObjectName(u"edit_d_y2")
-        self.edit_d_y2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_d_y2, 5, 0, 1, 1)
-
-        self.label_4 = QLabel(self.groupBox_3)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setMaximumSize(QSize(120, 16777215))
-        self.label_4.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_4, 4, 4, 1, 1)
-
-        self.edit_a_x1 = QLineEdit(self.groupBox_3)
-        self.edit_a_x1.setObjectName(u"edit_a_x1")
-        self.edit_a_x1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_a_x1, 2, 3, 1, 1)
-
-        self.edit_c_x2 = QLineEdit(self.groupBox_3)
-        self.edit_c_x2.setObjectName(u"edit_c_x2")
-        self.edit_c_x2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_c_x2, 4, 1, 1, 1)
-
-        self.edit_a_y1 = QLineEdit(self.groupBox_3)
-        self.edit_a_y1.setObjectName(u"edit_a_y1")
-        self.edit_a_y1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_a_y1, 2, 2, 1, 1)
-
-        self.edit_topic_y1 = QLineEdit(self.groupBox_3)
-        self.edit_topic_y1.setObjectName(u"edit_topic_y1")
-        self.edit_topic_y1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_topic_y1, 1, 2, 1, 1)
-
-        self.label = QLabel(self.groupBox_3)
-        self.label.setObjectName(u"label")
-        self.label.setMaximumSize(QSize(120, 16777215))
-        self.label.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label, 1, 4, 1, 1)
-
-        self.edit_d_x1 = QLineEdit(self.groupBox_3)
-        self.edit_d_x1.setObjectName(u"edit_d_x1")
-        self.edit_d_x1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_d_x1, 5, 3, 1, 1)
-
-        self.edit_topic_y2 = QLineEdit(self.groupBox_3)
-        self.edit_topic_y2.setObjectName(u"edit_topic_y2")
-        self.edit_topic_y2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_topic_y2, 1, 0, 1, 1)
-
-        self.edit_b_y2 = QLineEdit(self.groupBox_3)
-        self.edit_b_y2.setObjectName(u"edit_b_y2")
-        self.edit_b_y2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_b_y2, 3, 0, 1, 1)
-
-        self.label_6 = QLabel(self.groupBox_3)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_6, 0, 3, 1, 1)
-
-        self.edit_topic_x2 = QLineEdit(self.groupBox_3)
-        self.edit_topic_x2.setObjectName(u"edit_topic_x2")
-        self.edit_topic_x2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_topic_x2, 1, 1, 1, 1)
-
-        self.label_8 = QLabel(self.groupBox_3)
-        self.label_8.setObjectName(u"label_8")
-        self.label_8.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_8, 0, 1, 1, 1)
-
-        self.edit_b_x2 = QLineEdit(self.groupBox_3)
-        self.edit_b_x2.setObjectName(u"edit_b_x2")
-        self.edit_b_x2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_b_x2, 3, 1, 1, 1)
-
-        self.edit_c_y2 = QLineEdit(self.groupBox_3)
-        self.edit_c_y2.setObjectName(u"edit_c_y2")
-        self.edit_c_y2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_c_y2, 4, 0, 1, 1)
-
-        self.edit_a_x2 = QLineEdit(self.groupBox_3)
-        self.edit_a_x2.setObjectName(u"edit_a_x2")
-        self.edit_a_x2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_a_x2, 2, 1, 1, 1)
-
-        self.label_3 = QLabel(self.groupBox_3)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setMaximumSize(QSize(120, 16777215))
-        self.label_3.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_3, 3, 4, 1, 1)
-
-        self.edit_c_y1 = QLineEdit(self.groupBox_3)
-        self.edit_c_y1.setObjectName(u"edit_c_y1")
-        self.edit_c_y1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_c_y1, 4, 2, 1, 1)
-
-        self.edit_b_x1 = QLineEdit(self.groupBox_3)
-        self.edit_b_x1.setObjectName(u"edit_b_x1")
-        self.edit_b_x1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_b_x1, 3, 3, 1, 1)
-
-        self.edit_b_y1 = QLineEdit(self.groupBox_3)
-        self.edit_b_y1.setObjectName(u"edit_b_y1")
-        self.edit_b_y1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_b_y1, 3, 2, 1, 1)
-
-        self.label_7 = QLabel(self.groupBox_3)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_7, 0, 2, 1, 1)
-
-        self.label_9 = QLabel(self.groupBox_3)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_9, 0, 0, 1, 1)
-
-        self.label_5 = QLabel(self.groupBox_3)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setMaximumSize(QSize(120, 16777215))
-        self.label_5.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_5, 5, 4, 1, 1)
-
-        self.edit_d_x2 = QLineEdit(self.groupBox_3)
-        self.edit_d_x2.setObjectName(u"edit_d_x2")
-        self.edit_d_x2.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_d_x2, 5, 1, 1, 1)
-
-        self.edit_d_y1 = QLineEdit(self.groupBox_3)
-        self.edit_d_y1.setObjectName(u"edit_d_y1")
-        self.edit_d_y1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_d_y1, 5, 2, 1, 1)
-
-        self.edit_c_x1 = QLineEdit(self.groupBox_3)
-        self.edit_c_x1.setObjectName(u"edit_c_x1")
-        self.edit_c_x1.setReadOnly(True)
-
-        self.gridLayout_5.addWidget(self.edit_c_x1, 4, 3, 1, 1)
-
-        self.label_2 = QLabel(self.groupBox_3)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setMaximumSize(QSize(120, 16777215))
-        self.label_2.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_5.addWidget(self.label_2, 2, 4, 1, 1)
-
-
-        self.horizontalLayout_5.addWidget(self.groupBox_3)
-
-        self.line_4 = QFrame(self.groupBox_6)
-        self.line_4.setObjectName(u"line_4")
-        self.line_4.setStyleSheet(u"QFrame{margin:15px;}")
-        self.line_4.setFrameShape(QFrame.Shape.VLine)
-        self.line_4.setFrameShadow(QFrame.Shadow.Sunken)
-
-        self.horizontalLayout_5.addWidget(self.line_4)
-
-        self.label_14 = QLabel(self.groupBox_6)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setMinimumSize(QSize(40, 0))
-        self.label_14.setMaximumSize(QSize(41, 16777215))
-        self.label_14.setStyleSheet(u"QLabel {\n"
-"    /* 1. \u80cc\u666f\u4e0e\u5706\u89d2 */\n"
-"    background-color: #ffffff;    /* \u7eaf\u767d\u80cc\u666f */\n"
-"    border-radius: 6px;           /* \u7a0d\u5fae\u5e26\u4e00\u70b9\u5706\u89d2\uff0c\u914d\u5408\u6574\u4f53\u98ce\u683c */\n"
-"    \n"
-"    /* 2. \u6587\u5b57\u6837\u5f0f */\n"
-"    color: #000000;               /* \u6587\u5b57\u9ed1\u8272 */\n"
-"    font-size: 12pt;              /* \u5b57\u53f7 12 (\u6ce8\u610f\u5355\u4f4d\u662f pt \u6216 px) */\n"
-"    font-weight: bold;            /* \u7c97\u4f53 */\n"
-"    \n"
-"    /* 3. \u5c45\u4e2d\u5bf9\u9f50 (\u6837\u5f0f\u8868\u5199\u6cd5) */\n"
-"    qproperty-alignment: 'AlignHCenter | AlignVCenter';\n"
-"}")
-
-        self.horizontalLayout_5.addWidget(self.label_14, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.gridLayout_3.addWidget(self.groupBox_6, 3, 1, 1, 1)
-
         self.label_canvas = ClickableCanvas(self.page_1)
         self.label_canvas.setObjectName(u"label_canvas")
         self.label_canvas.setMinimumSize(QSize(1, 1))
@@ -519,7 +282,8 @@ class Ui_MainWindow(object):
         self.groupBox.setMinimumSize(QSize(0, 250))
         self.groupBox.setMaximumSize(QSize(16777215, 250))
         self.groupBox.setStyleSheet(u"QPushButton{background-color:#FFFFFF;}\n"
-"QGroupBox{padding:0px;}")
+"QGroupBox{padding:0px;\n"
+"margin-buttom: 0px;}")
         self.horizontalLayout_4 = QHBoxLayout(self.groupBox)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.groupBox_5 = QGroupBox(self.groupBox)
@@ -724,6 +488,279 @@ class Ui_MainWindow(object):
 
 
         self.gridLayout_3.addWidget(self.groupBox, 0, 0, 2, 2)
+
+        self.groupBox_6 = QGroupBox(self.page_1)
+        self.groupBox_6.setObjectName(u"groupBox_6")
+        self.groupBox_6.setStyleSheet(u"QLabel{background-color:#FFFFFF;}\n"
+"QGroupBox{padding:0px;\n"
+"	margin: 15px;\n"
+"	margin-top: 10px;}\n"
+"QLineEdit{background-color:#FFFFFF;\n"
+"		border:none;}")
+        self.horizontalLayout_5 = QHBoxLayout(self.groupBox_6)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.groupBox_3 = QGroupBox(self.groupBox_6)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.groupBox_3.setStyleSheet(u"QGroupBox {\n"
+"    border: 0px solid #a0b0c5;\n"
+"    border-radius: 12px;\n"
+"    margin-top: 5px;\n"
+"	margin-bottom:0px;\n"
+"    padding: 0px;\n"
+"    background-color: rgba(255, 255, 255, 100);\n"
+"}")
+        self.gridLayout_5 = QGridLayout(self.groupBox_3)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_5.setContentsMargins(-1, 0, -1, 14)
+        self.edit_d_x1 = QLineEdit(self.groupBox_3)
+        self.edit_d_x1.setObjectName(u"edit_d_x1")
+        self.edit_d_x1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_d_x1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_d_x1, 5, 3, 1, 1)
+
+        self.edit_b_x2 = QLineEdit(self.groupBox_3)
+        self.edit_b_x2.setObjectName(u"edit_b_x2")
+        self.edit_b_x2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_b_x2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_b_x2, 3, 1, 1, 1)
+
+        self.edit_c_x1 = QLineEdit(self.groupBox_3)
+        self.edit_c_x1.setObjectName(u"edit_c_x1")
+        self.edit_c_x1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_c_x1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_c_x1, 4, 3, 1, 1)
+
+        self.edit_topic_x2 = QLineEdit(self.groupBox_3)
+        self.edit_topic_x2.setObjectName(u"edit_topic_x2")
+        self.edit_topic_x2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_topic_x2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_topic_x2, 1, 1, 1, 1)
+
+        self.edit_c_y2 = QLineEdit(self.groupBox_3)
+        self.edit_c_y2.setObjectName(u"edit_c_y2")
+        self.edit_c_y2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_c_y2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_c_y2, 4, 0, 1, 1)
+
+        self.edit_d_y2 = QLineEdit(self.groupBox_3)
+        self.edit_d_y2.setObjectName(u"edit_d_y2")
+        self.edit_d_y2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_d_y2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_d_y2, 5, 0, 1, 1)
+
+        self.edit_topic_y2 = QLineEdit(self.groupBox_3)
+        self.edit_topic_y2.setObjectName(u"edit_topic_y2")
+        self.edit_topic_y2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_topic_y2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_topic_y2, 1, 0, 1, 1)
+
+        self.edit_d_x2 = QLineEdit(self.groupBox_3)
+        self.edit_d_x2.setObjectName(u"edit_d_x2")
+        self.edit_d_x2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_d_x2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_d_x2, 5, 1, 1, 1)
+
+        self.edit_c_y1 = QLineEdit(self.groupBox_3)
+        self.edit_c_y1.setObjectName(u"edit_c_y1")
+        self.edit_c_y1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_c_y1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_c_y1, 4, 2, 1, 1)
+
+        self.edit_c_x2 = QLineEdit(self.groupBox_3)
+        self.edit_c_x2.setObjectName(u"edit_c_x2")
+        self.edit_c_x2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_c_x2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_c_x2, 4, 1, 1, 1)
+
+        self.edit_topic_y1 = QLineEdit(self.groupBox_3)
+        self.edit_topic_y1.setObjectName(u"edit_topic_y1")
+        self.edit_topic_y1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_topic_y1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_topic_y1, 1, 2, 1, 1)
+
+        self.edit_b_x1 = QLineEdit(self.groupBox_3)
+        self.edit_b_x1.setObjectName(u"edit_b_x1")
+        self.edit_b_x1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_b_x1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_b_x1, 3, 3, 1, 1)
+
+        self.edit_a_x2 = QLineEdit(self.groupBox_3)
+        self.edit_a_x2.setObjectName(u"edit_a_x2")
+        self.edit_a_x2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_a_x2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_a_x2, 2, 1, 1, 1)
+
+        self.edit_b_y2 = QLineEdit(self.groupBox_3)
+        self.edit_b_y2.setObjectName(u"edit_b_y2")
+        self.edit_b_y2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_b_y2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_b_y2, 3, 0, 1, 1)
+
+        self.label_2 = QLabel(self.groupBox_3)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(120, 16777215))
+        self.label_2.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_2, 2, 4, 1, 1)
+
+        self.edit_d_y1 = QLineEdit(self.groupBox_3)
+        self.edit_d_y1.setObjectName(u"edit_d_y1")
+        self.edit_d_y1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_d_y1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_d_y1, 5, 2, 1, 1)
+
+        self.label_7 = QLabel(self.groupBox_3)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_7, 0, 2, 1, 1)
+
+        self.edit_a_y2 = QLineEdit(self.groupBox_3)
+        self.edit_a_y2.setObjectName(u"edit_a_y2")
+        self.edit_a_y2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_a_y2.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_a_y2, 2, 0, 1, 1)
+
+        self.label = QLabel(self.groupBox_3)
+        self.label.setObjectName(u"label")
+        self.label.setMaximumSize(QSize(120, 16777215))
+        self.label.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label, 1, 4, 1, 1)
+
+        self.label_8 = QLabel(self.groupBox_3)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_8, 0, 1, 1, 1)
+
+        self.label_4 = QLabel(self.groupBox_3)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setMaximumSize(QSize(120, 16777215))
+        self.label_4.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_4, 4, 4, 1, 1)
+
+        self.label_6 = QLabel(self.groupBox_3)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_6, 0, 3, 1, 1)
+
+        self.label_5 = QLabel(self.groupBox_3)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setMaximumSize(QSize(120, 16777215))
+        self.label_5.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_5, 5, 4, 1, 1)
+
+        self.label_3 = QLabel(self.groupBox_3)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMaximumSize(QSize(120, 16777215))
+        self.label_3.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_3, 3, 4, 1, 1)
+
+        self.label_9 = QLabel(self.groupBox_3)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_9, 0, 0, 1, 1)
+
+        self.edit_a_y1 = QLineEdit(self.groupBox_3)
+        self.edit_a_y1.setObjectName(u"edit_a_y1")
+        self.edit_a_y1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_a_y1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_a_y1, 2, 2, 1, 1)
+
+        self.edit_b_y1 = QLineEdit(self.groupBox_3)
+        self.edit_b_y1.setObjectName(u"edit_b_y1")
+        self.edit_b_y1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_b_y1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_b_y1, 3, 2, 1, 1)
+
+        self.edit_a_x1 = QLineEdit(self.groupBox_3)
+        self.edit_a_x1.setObjectName(u"edit_a_x1")
+        self.edit_a_x1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_a_x1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_a_x1, 2, 3, 1, 1)
+
+        self.edit_topic_x1 = QLineEdit(self.groupBox_3)
+        self.edit_topic_x1.setObjectName(u"edit_topic_x1")
+        self.edit_topic_x1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.edit_topic_x1.setReadOnly(True)
+
+        self.gridLayout_5.addWidget(self.edit_topic_x1, 1, 3, 1, 1)
+
+        self.label_15 = QLabel(self.groupBox_3)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_15, 6, 4, 1, 1)
+
+        self.label_ai = ClickableCanvas(self.groupBox_3)
+        self.label_ai.setObjectName(u"label_ai")
+        self.label_ai.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_5.addWidget(self.label_ai, 6, 0, 1, 4)
+
+
+        self.horizontalLayout_5.addWidget(self.groupBox_3)
+
+        self.line_4 = QFrame(self.groupBox_6)
+        self.line_4.setObjectName(u"line_4")
+        self.line_4.setStyleSheet(u"QFrame{margin:15px;}")
+        self.line_4.setFrameShape(QFrame.Shape.VLine)
+        self.line_4.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.horizontalLayout_5.addWidget(self.line_4)
+
+        self.label_14 = QLabel(self.groupBox_6)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setMinimumSize(QSize(40, 0))
+        self.label_14.setMaximumSize(QSize(41, 16777215))
+        self.label_14.setStyleSheet(u"QLabel {\n"
+"    /* 1. \u80cc\u666f\u4e0e\u5706\u89d2 */\n"
+"    background-color: #ffffff;    /* \u7eaf\u767d\u80cc\u666f */\n"
+"    border-radius: 6px;           /* \u7a0d\u5fae\u5e26\u4e00\u70b9\u5706\u89d2\uff0c\u914d\u5408\u6574\u4f53\u98ce\u683c */\n"
+"    \n"
+"    /* 2. \u6587\u5b57\u6837\u5f0f */\n"
+"    color: #000000;               /* \u6587\u5b57\u9ed1\u8272 */\n"
+"    font-size: 12pt;              /* \u5b57\u53f7 12 (\u6ce8\u610f\u5355\u4f4d\u662f pt \u6216 px) */\n"
+"    font-weight: bold;            /* \u7c97\u4f53 */\n"
+"    \n"
+"    /* 3. \u5c45\u4e2d\u5bf9\u9f50 (\u6837\u5f0f\u8868\u5199\u6cd5) */\n"
+"    qproperty-alignment: 'AlignHCenter | AlignVCenter';\n"
+"}")
+
+        self.horizontalLayout_5.addWidget(self.label_14, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignVCenter)
+
+
+        self.gridLayout_3.addWidget(self.groupBox_6, 3, 1, 1, 1)
 
         self.content_stack.addWidget(self.page_1)
         self.page_2 = QWidget()
@@ -946,18 +983,6 @@ class Ui_MainWindow(object):
         self.label_Ollama_AIs.setText("")
         self.label_Ollama_AIs_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Ollama AI</p></body></html>", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:700;\">\u914d</span></p><p><span style=\" font-size:12pt; font-weight:700;\">\u7f6e</span></p><p><span style=\" font-size:12pt; font-weight:700;\">\u4fe1</span></p><p><span style=\" font-size:12pt; font-weight:700;\">\u606f</span></p></body></html>", None))
-        self.groupBox_6.setTitle("")
-        self.groupBox_3.setTitle("")
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"C", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"\u9898\u76ee", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"x1", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"x2", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"B", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"y1", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"y2", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"D", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"A", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u5f53</p><p>\u524d</p><p>\u5750</p><p>\u6807</p></body></html>", None))
         self.label_canvas.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.groupBox.setTitle("")
         self.groupBox_5.setTitle("")
@@ -967,6 +992,20 @@ class Ui_MainWindow(object):
         self.btn_delete_config.setText(QCoreApplication.translate("MainWindow", u"\u5220\u9664\u914d\u7f6e", None))
         self.btn_save_config.setText(QCoreApplication.translate("MainWindow", u"\u4fdd\u5b58\u914d\u7f6e", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u914d</p><p>\u7f6e</p><p>\u7f16</p><p>\u8f91</p></body></html>", None))
+        self.groupBox_6.setTitle("")
+        self.groupBox_3.setTitle("")
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"A", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"y1", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"\u9898\u76ee", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"x2", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"C", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"x1", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"D", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"B", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"y2", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"\u5f53\u524dAI", None))
+        self.label_ai.setText("")
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u5f53</p><p>\u524d</p><p>\u914d</p><p>\u7f6e</p></body></html>", None))
         self.btn_start_task.setText(QCoreApplication.translate("MainWindow", u"\u5f00\u59cb\u8fd0\u884c", None))
         self.btn_stop_task.setText(QCoreApplication.translate("MainWindow", u"\u505c\u6b62\u8fd0\u884c", None))
         self.GGB.setTitle("")

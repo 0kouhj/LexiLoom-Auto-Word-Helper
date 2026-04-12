@@ -222,7 +222,9 @@ class PageConfig:
         self.current_config_id = cfg_id
         self.active_config = self.devices_data[cfg_id]
 
-        # --- 🟢 新增：同步 AI 模型到下拉框 ---
+        self.ui.label_ai.setText("")
+
+        # --- 同步 AI 模型到下拉框 ---
         saved_model = self.active_config.get("ai_model", "")
         if saved_model:
             # 在下拉框中寻找保存的模型名称
@@ -230,6 +232,7 @@ class PageConfig:
             if index >= 0:
                 self.ui.combo_ai_model.setCurrentIndex(index)
                 self.append_log(LogLevel.INFO,f"已同步 AI 模型: {saved_model}")
+                self.ui.label_ai.setText(saved_model)
             else:
                 self.append_log(LogLevel.WARN,f"配置要求的模型 '{saved_model}' 当前不可用")
         # ------------------------------------
@@ -237,8 +240,11 @@ class PageConfig:
         for step in self.calibrate_steps:
             self._sync_roi_to_ui(step, ["", "", "", ""])
 
+        
+
         for k, roi in self.active_config.get("roi", {}).items():
             self._sync_roi_to_ui(k, roi)
+        
 
         self.append_log(LogLevel.INFO,"配置已加载")
 

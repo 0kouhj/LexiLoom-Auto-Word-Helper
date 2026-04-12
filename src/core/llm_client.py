@@ -39,7 +39,6 @@ class OllamaClient(BaseLLMClient):
         full_prompt = template.format(context=context)
 
         # ==================== [ 强力 DEBUG 输出 ] ====================
-        print("\n" + "🔥" * 30)
         print("【提示词加载逻辑监控】")
         
         # 判断提示词来源
