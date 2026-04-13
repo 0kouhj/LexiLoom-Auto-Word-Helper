@@ -1,5 +1,6 @@
 # LexiLoom 自动背单词系统
 - 本软件旨在自动化操作安卓系统背单词操作,解放大学生的双手于背单词系统。
+- ![LexiLoom Preview](https://raw.githubusercontent.com/0kouhj/LexiLoom-Auto-Word-Helper/master/images/page1.webp)
 ## 环境要求
 - Ollama(推荐使用qwen2.5:7b模型,不要用思维链模型)
 - 安卓手机的USB调试授权
