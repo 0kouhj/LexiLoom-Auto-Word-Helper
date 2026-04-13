@@ -3,9 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 .env
-.venv
+.venv_lite
+.vene
 env/
-venv/
+venv_lite/
+vene/
 ENV/
 build/
 dist/
