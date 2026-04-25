@@ -25,7 +25,6 @@ class BaseLLMClient:
 
 class OllamaClient(BaseLLMClient):
     def ask(self, q_data: dict) -> str:
-        # 1. 提取 OCR 数据
         context_parts = [f"Topic: {q_data.get('topic', '')}"]
         for opt in "ABCD":
             if q_data.get(opt):

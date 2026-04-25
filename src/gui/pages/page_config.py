@@ -23,7 +23,7 @@ class PageConfig:
         self.p1_cache = None
 
         self.active_config = None
-        self.current_config_id = None  # ✅ 关键
+        self.current_config_id = None
 
         self._refresh_model_list_ui()
         self._refresh_ui_combo()

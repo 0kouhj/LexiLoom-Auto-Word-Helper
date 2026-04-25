@@ -4,10 +4,10 @@ __pycache__/
 *$py.class
 .env
 .venv_lite
-.vene
+.venv
 env/
 venv_lite/
-vene/
+venv/
 ENV/
 build/
 dist/

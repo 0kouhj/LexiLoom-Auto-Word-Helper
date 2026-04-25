@@ -40,18 +40,19 @@ class LexiLoomMainWindow(PageEnv, PageConfig, PageTask, QMainWindow):
         self.init_page_task()
 
         self._bind_all_signals()
-        self.on_btn_check_env_clicked()
-
+        
         self.sig_notification.connect(self._on_notification_received)
 
         import ctypes
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("mycompany.lexiloom.version1")
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("lexiloom.version1")
 
         self.ui.nav_list.currentRowChanged.connect(
             lambda index: UIEffects.play_pcl_transition(self.ui.content_stack, index)
         )
         self.ui.content_stack.setCurrentIndex(0)
         self.ui.nav_list.setCurrentRow(0)
+        
+        self.on_btn_check_env_clicked()
 
 
     # =========================
@@ -120,7 +121,6 @@ class LexiLoomMainWindow(PageEnv, PageConfig, PageTask, QMainWindow):
 
         # 构造 HTML
         tag = f"[{level.value}]"
-        # 如果有报错对象，拼接简短的 Reason
         display_msg = msg
         if error:
             display_msg += f" (Reason: {str(error)})"
